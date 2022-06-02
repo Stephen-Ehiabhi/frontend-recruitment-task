@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 768px) {
+}
+
+/* Tablet view */
+@media screen and (min-width: 600px) {
+}
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+}
