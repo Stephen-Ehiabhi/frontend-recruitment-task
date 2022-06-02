@@ -8,6 +8,7 @@
   font-style: normal;
 }
 
+/* Mobile View */
 .page_container {
   width: 100%;
   display: flex;
@@ -22,11 +23,11 @@
 
 .page_paragraph {
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 170%;
   padding-top: 10px;
   color: #121212;
-  width: 80%;
+  width: 90%;
 }
 
 .page_second_div {
