@@ -55,7 +55,7 @@
 }
 
 /* Tablet view */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .page_second_div {
     align-items: center;
     justify-content: center;
