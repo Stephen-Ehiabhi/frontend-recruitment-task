@@ -54,7 +54,7 @@
   font-size: 1.1rem;
 }
 
-/* Tablet view */
+/* Mobile view */
 @media screen and (max-width: 768px) {
   .page_second_div {
     align-items: center;
