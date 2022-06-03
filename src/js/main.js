@@ -6,25 +6,36 @@ const main = (() => {
   const alert = document.querySelector(".page_alert");
   const alert_p = document.querySelector(".page_alert_box_p");
 
-  var storeAmount = 0;
+  var storeAmount = window.localStorage.getItem("count");
 
   //function to open the alert page
   const openAlertMenu = () => {
     //add a style to the alert display
     alert.style.display = "flex";
-    //increment the amount
-    storeAmount += 1;
-    //add the amount of clicks to the alert text
-    alert_p.textContent = `You have clicked this button ${storeAmount} times`;
+
+   //check id the count is greater 5
+    if (storeAmount >= 5) {
+      //show reset botton
+      
+    }
+    {
+      alert_p.textContent = `You have clicked this button ${storeAmount} times`;
+      window.localStorage.setItem("count", storeAmount);
+       //increment the amount
+      storeAmount = Number(window.localStorage.getItem("count")) + 1;
+    }
   };
 
   //function to close the alert page
   const closeAlertMenu = () => {
     alert.style.display = "none";
+    alert_p.textContent = `You have clicked this button ${storeAmount} times`;
   };
 
   //added click event to the button to open alert
   btn.addEventListener("click", openAlertMenu);
   //added click event to the icon to close alert
   close.addEventListener("click", closeAlertMenu);
+
+  alert.addEventListener("click", closeAlertMenu);
 })();
