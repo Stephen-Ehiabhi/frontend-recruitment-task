@@ -10,7 +10,7 @@
 
 /* Mobile View */
 .page_container {
-  width: 100%;
+  width: 1440px;
   display: flex;
   flex-direction: column;
 }
@@ -59,6 +59,7 @@
   background: #1212127b;
   position: absolute;
   top: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   display: none;
