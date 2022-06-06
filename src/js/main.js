@@ -31,16 +31,14 @@ const main = (() => {
   //function to close the alert page
   const closeAlertMenu = () => {
     alert.style.display = "none";
-    alert_p.textContent = `You have clicked this button ${storeAmount} times`;
   };
 
   //function to reset the counternam
   resetb.addEventListener("click", () => {
-    window.localStorage.clear();
+    storeAmount = 1;
+    window.localStorage.removeItem("count");
     resetb.style.display = "none";
-    storeAmount = window.localStorage.setItem("count", 1);
-    alert_p.textContent = `You have clicked this button ${storeAmount} times`;
-
+    window.localStorage.setItem("count", 1);
   });
 
   //added click event to the button to open alert
