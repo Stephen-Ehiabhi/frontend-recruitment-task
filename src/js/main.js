@@ -15,7 +15,6 @@ const main = (() => {
     //add a style to the alert display
     alert.style.display = "flex";
 
-    console.log(storeAmount);
     //increment the amount
     storeAmount = Number(window.localStorage.getItem("count")) + 1;
     //store the count in local-storage
@@ -25,7 +24,6 @@ const main = (() => {
 
     //show reset button logic passes
     if (storeAmount >= 5) resetb.style.display = "flex"; //show reset botton
-    console.log(storeAmount);
   };
 
   //function to close the alert page
@@ -35,10 +33,16 @@ const main = (() => {
 
   //function to reset the counter
   resetb.addEventListener("click", () => {
-    storeAmount = 0;
-    window.localStorage.removeItem("count");
-    resetb.style.display = "none";
-    window.localStorage.setItem("count", 0);
+    //ask for permission to reset
+    const sure = confirm("Are you sure, you want to reset?");
+    if (sure) {
+      storeAmount = 0;
+      window.localStorage.removeItem("count");
+      resetb.style.display = "none";
+      window.localStorage.setItem("count", 0);
+      window.alert(" :) - Counter was successfully reset!");
+    }
+    return;
   });
 
   //added click event to the button to open alert

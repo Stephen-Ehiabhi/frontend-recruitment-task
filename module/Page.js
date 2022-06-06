@@ -1,13 +1,10 @@
-/*
-    Reusable modules / components
-*/
-
+//Reusable modules / components
 //Page Module
 class Page extends HTMLElement {
   connectedCallback() {
     var image = this.attributes.image.value;
     var icon = this.attributes.icon.value;
-    
+
     this.innerHTML = `
     <section class="page_container">
     <section class="page_alert">

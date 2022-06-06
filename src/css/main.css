@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom:70px;
+  margin-bottom: 70px;
 }
 
 .page_title {
@@ -98,7 +98,7 @@
 }
 
 .page_alert_box {
-  width: 75vw;
+  width: 50vw;
   height: 16.875rem;
   padding: 30px;
   opacity: 1;
@@ -151,11 +151,13 @@
   }
 
   .page_alert_box {
+          width: 67vw;
+          height: 210px;
     padding-left: 95px;
   }
 
   .x_icon {
-    top: -1rem;
+    top: -.6rem;
     left: 97%;
   }
 
@@ -180,6 +182,11 @@
     width: 30%;
     align-items: flex-start;
   }
+
+  .page_alert_box_h,
+.page_alert_box_p {
+  margin-bottom: 16px;
+}
 
   .show_popup {
     width: 8rem;
