@@ -1,8 +1,8 @@
 /*
-    Here are all the reuable modules for the page
+    Reusable modules / components
 */
 
-//Alert Module
+//Page Module
 class Page extends HTMLElement {
   connectedCallback() {
     var image = this.attributes.image.value;
@@ -10,19 +10,18 @@ class Page extends HTMLElement {
     
     this.innerHTML = `
     <section class="page_container">
-    <div class="page_alert">
-      <div class="page_alert_box">
-        <img class="x_icon" src="${icon}" />
-        <button type="button" class="reset_button">reset</button>
+    <section class="page_alert">
+      <section class="page_alert_box">
+        <img class="x_icon" src="${icon}" alt="cancel icon"/>
         <h1 class="page_alert_box_h">Alert!</h1>
         <p class="page_alert_box_p">
-          You have clicked this button
-          <b><span class="count"></span> times</b>
+        You have clicked <b><span class="count"></span> times</b> to related button.
         </p>
-      </div>
-    </div>
-    <img class="page_image" src="${image}" />
-    <div class="page_second_div">
+        <button type="button" class="reset_button">Reset Count</button>
+      </section>
+    </section>
+    <img class="page_image" src="${image}" alt="Beach Image"/>
+    <section class="page_second_div">
       <h1 class="page_title">Lorem ipsum</h1>
       <p class="page_paragraph">
         Infinitely scalable, feature-rich and cloud-native data management and
@@ -30,7 +29,7 @@ class Page extends HTMLElement {
         managed via a single app with no hardware required.
       </p>
       <button class="show_popup" id="btn_popup">Button</button>
-    </div>
+    </section>
   </section>`;
   }
 }
